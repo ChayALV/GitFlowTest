@@ -8,6 +8,7 @@ class HomePage extends StatelessWidget {
   //TODO: TERMINAR DE ESTUDIAR BLOC
   @override
   Widget build(BuildContext context) {
+    const double imgSize = 400;
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -16,8 +17,8 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                width: 400,
-                height: 400,
+                width: imgSize,
+                height: imgSize,
                 child: Image.network('https://pbs.twimg.com/profile_images/988272404915875840/lE7ZkrO-_400x400.jpg')),
               BlocBuilder<HomeBloc, HomeState>(builder: (context, state) {
                 return state.mePicanLosCocos
@@ -25,12 +26,10 @@ class HomePage extends StatelessWidget {
                     : const Text('NO me pican LOS COCOS');
               }),
               MaterialButton(
-                onPressed: () {
-                  BlocProvider.of<HomeBloc>(context).
-                    add(RascarCocosEvent(false));
-                },
+                onPressed: () => BlocProvider.of<HomeBloc>(context).
+                    add(RascarCocosEvent(false)),
                 color: Colors.blue,
-                child: const Text('Rascar los cocos XD'),
+                child: const Text('Rascar los cocos'),
               )
             ],
           ),
