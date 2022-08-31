@@ -5,7 +5,6 @@ import 'package:bloc_prueba/blocs/home_bloc/home_bloc.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
-  //TODO: TERMINAR DE ESTUDIAR BLOC
   @override
   Widget build(BuildContext context) {
     const double imgSize = 400;
