@@ -6,17 +6,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: ( context ) => HomeBloc()),
+        BlocProvider( create: ( context ) => HomeBloc() ),
       ],
       child: MaterialApp(
         theme: ThemeData.dark(),
-        title: 'Material App',
+        title: 'BLOC app prueba',
         debugShowCheckedModeBanner: false,
         home: const  HomePage()
       ),
